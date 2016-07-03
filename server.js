@@ -7,9 +7,9 @@ var methodOverride = require("method-override");
 
 //mongoose.connect('')
 //mongoose.connect("mongodb://localhost/to-do");
-var url = process.env.DATABASEURL || "mongodb://localhost/to-do";
-mongoose.connect(url);
-//mongoose.connect("mongodb://lang:LGiscool@ds011775.mlab.com:11775/to-do" || "mongodb://localhost/to-do");
+// var url = process.env.DATABASEURL || "mongodb://localhost/to-do";
+// mongoose.connect(url);
+mongoose.connect("mongodb://lang:LGiscool@ds011775.mlab.com:11775/to-do" || "mongodb://localhost/to-do");
 
 app.use(express.static(__dirname+'/public'));
 app.use(morgan('dev'));
