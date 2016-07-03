@@ -1,0 +1,54 @@
+<style>
+    img{
+        width:100%;
+    }
+</style>
+
+<div class='col-md-2'>
+</div>
+
+<div class='col-md-8 well'>
+<img src='https://unsplash.it/1000/300?image=1061'>
+
+
+        <!-- HEADER AND TO BUY COUNT -->
+        <div class="jumbotron text-center">
+            <h1>To Buy: <span class="label label-info">{{ tobuys.length }}</span></h1>
+        </div>
+
+        <!-- TO BUY LIST -->
+        <div id="tobuy-list" class="row">
+            <div class="col-sm-6 col-sm-offset-3" id='tobuy-row'>
+
+                <!-- LOOP OVER THE TO BUYS IN $scope.tobuys -->
+                <div class="checkbox" ng-repeat="tobuy in tobuys">
+                    <label>
+                        <input type="button" class="btn btn-danger btn-sm" ng-click="deleteTobuy(tobuy._id)" value='DELETE'> {{ tobuy.text }}
+                    </label>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- FORM TO CREATE TO BUYS -->
+        <div id="tobuy-form" class="row">
+            <div class="col-sm-8 col-sm-offset-2 text-center">
+                <form>
+                    <div class="form-group">
+
+                        <!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
+                        <input type="text" class="form-control input-lg text-center" placeholder="Add your To-Buy item" ng-model="formData.text">
+                    </div>
+
+                    <!-- createToBuy() WILL CREATE NEW TO BUYS -->
+                    <button type="submit" class="btn btn-primary btn-lg" ng-click="createTobuy()">Add</button>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class='col-md-2'>
+</div>

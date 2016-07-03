@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app='todoApp'>
+    <head>
+        <!-- META -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+        <title>To Do Angular/Node app</title>
+        
+        <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
+        <!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script><!-- load angular -->
+        <script src="//code.angularjs.org/1.3.0-rc.1/angular.min.js"></script>
+        <script src="//code.angularjs.org/1.3.0-rc.1/angular-route.min.js"></script>
+        <script src="core.js"></script>
+
+
+        <style>
+            html{
+                overflow-y:scroll;
+            } 
+            body { 
+                /*padding-top:50px; */
+            }
+            #todo-list { 
+                margin-bottom:30px;
+            }
+            
+            #todo-row{
+                border: 1px solid #e6e6e6;
+            }
+
+        </style>
+    
+    </head>
+    
+
+        
+        <header>
+			<nav class="navbar navbar-inverse">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> To-Do</a>
+				</div>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><i class="fa fa-home"></i>To Do</a></li>
+					<li><a href="#/tobuy"><i class="fa fa-home"></i>To Buy</a></li>
+					<!--<li><a href="/Angular1_course_3/"><i class="fa fa-home"></i> Angurlar 1 v3 home</a></li>-->
+				</ul>
+			</div>
+			</nav>
+		</header>
+        
+        
+        <div ng-view></div>
+        
+
+    </body>
+</html>
+    
