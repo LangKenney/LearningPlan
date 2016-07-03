@@ -4,8 +4,8 @@
   "description": "Basic to-do application using node as a JSON API and Angular as a front end template",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
+
   },
   "author": "Lang Kenney",
   "license": "ISC",
