@@ -1,0 +1,84 @@
+<style>
+    img{
+        width:100%;
+    }
+    .projectTable { 
+        /*border: 1px solid #ddd;*/
+        border-collapse: separate;
+        border-left: 10px;
+        border-radius: 4px;
+        border-spacing: 0px;
+        
+    }
+    table, tr, td {
+        border: 1px solid #ddd;
+        border-collapse: collapse;
+        vertical-align: middle;
+    }
+    
+    p {
+        margin: 0;
+    }
+    
+    
+</style>
+
+<div class='col-md-2'>
+</div>
+
+<div class='col-md-8 well'>
+<img src='https://unsplash.it/1000/300?image=967'>
+
+
+        <!-- HEADER AND tolearn COUNT -->
+        <div class="jumbotron text-center">
+            <h1>Projects</h1>
+        </div>
+
+        <!-- tolearn LIST -->
+        <div id="tolearn-list" class="row">
+            <div  id='fds-row'>
+                
+                <!-- LOOP OVER THE tolearn IN $scope.tolearn -->
+                <!--<div class="checkbox" ng-repeat="project in projects">-->
+                    <table class='projectTable'>
+                        <tr ng-repeat="project in projects">
+                        <!--<label>-->
+                            <td><input type="button" class="btn btn-danger btn-sm" ng-click="deleteProject(project._id)" value='DELETE'></td>
+                            <td><h4>{{ project.projectName }}</h4></td>
+                            <td><p>{{project.discription}}</p></td>
+                            <td><a href='{{project.link}}' target='_blank'>Link</a></td>
+                            <!--<input type="checkbox" class="btn btn-success btn-sm" ng-click="deletetolearn(tolearn._id)" value='DONE'> {{ tolearn.text }}-->
+                        <!--</label>-->
+                        </tr>
+                    </table>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- FORM TO CREATE tolearn -->
+        <div id="tolearn-form" class="row">
+            <div class="col-sm-8 col-sm-offset-2 text-center">
+                <form>
+                    <div class="form-group">
+
+                        <!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
+                        <input type="text" class="form-control input-lg text-center" placeholder="Name" ng-model="formData.projectName">
+                        <!--<input type="text" class="form-control input-lg text-center" placeholder="discription" ng-model="formData.discription">-->
+                        <textarea rows="3" cols="70" class="form-control input-lg text-center" placeholder="Discription" ng-model="formData.discription">discription</textarea>
+                        <input type="text" class="form-control input-lg text-center" placeholder="Link" ng-model="formData.link">
+                    </div>
+                    <p>{{name}}</p>
+                    <!-- createtolearn() WILL CREATE NEW tolearn -->
+                    <button type="submit" class="btn btn-primary btn-block" ng-click="createProject()">Add</button>
+                    <!-- Delete tolearn() WILL DELETE tolearn -->
+                    <!--<button type="submit" class="btn btn-danger btn-lg" ng-click="deletetolearn(tolearn._id)">Delete</button>-->
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+<div class='col-md-2'>
+</div>

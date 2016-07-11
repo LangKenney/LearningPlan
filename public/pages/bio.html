@@ -1,0 +1,30 @@
+<style type="text/css">
+    body {
+        background-color: black;
+    }
+    .navbar {
+        margin-bottom: 0px;
+    }
+    .carousel-caption {
+        top: 0;
+        bottom: auto;
+    }
+    img{
+      margin:auto;
+      width: 100%;
+    }
+</style>
+
+<div>
+  <div>
+    <uib-carousel active="active" interval="myInterval" no-pause='true' no-wrap="noWrapSlides">
+      <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+        <div class="carousel-caption">
+            <h1 vertical-align='text-top'>{{slide.text}}</h1>
+            <!--<h4>Image {{slide.id+1}}</h4>  -->
+        </div>
+        <img ng-src="{{slide.image}}">
+      </uib-slide>
+    </uib-carousel>
+  </div>
+</div>
